@@ -4,8 +4,8 @@ Blog-achtige website met losse wkl-analyses
 
 ## Instructie
 
-- Maak voor elke post een nieuwe map in de map *posts*
+- Maak voor elke post een nieuwe map in de map *posts* en begin met de datum.
 - Kopieer de template voor een nieuwe post uit de map defaults - de template moet de naam index.qmd krijgen.
 - Pas de template aan
 - Render de website
-- Voor publicatie via Posit Connect is een actueel manifest nodig `rsconnect::writeManifest()`.
+- Voor publicatie via Posit Connect is een actueel manifest nodig `rsconnect::writeManifest()`. Dit bevat een beschrijving van alle packages. Als er geen nieuwe packages zijn gebruikt is een nieuw manifest niet nodig.

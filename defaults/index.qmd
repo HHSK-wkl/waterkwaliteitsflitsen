@@ -11,3 +11,25 @@ execute:
 # categories: [biologie, chemie, kaart]
 ---
 
+```{r}
+# library(tidyverse)
+# library(HHSKwkl)
+# library(glue)
+
+# library(sf)
+# library(leaflet)
+
+# theme_set(hhskthema())
+
+# fys_chem <- data_online("fys_chem.rds")
+# parameters <- data_online("parameters.rds")
+# meetpunten <- data_online("meetpunten.rds")
+# biologie <- data_online("biologie.rds")
+# biologie_kenmerken <- data_online("biologie_kenmerken.rds")
+# normen <- data_online("normen.rds")
+
+# biologie %>% 
+#   select(-contains("stadium")) %>% 
+#   distinct()
+
+```
