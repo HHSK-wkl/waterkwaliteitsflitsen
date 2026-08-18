@@ -1,0 +1,78 @@
+---
+title: "Weergave van waterkwaliteit o.b.v. peilgebieden"
+date: "2026-08-17"
+# image: "../../images/default_veenweide.jpg"
+description: "Weergave van waterkwaliteit per peilgebied."
+author: "Johan van Tent"
+code-fold: true
+execute: 
+  warning: false
+  message: false
+categories: [chemie, kaart]
+# image: "image.jpg"
+---
+
+## Vlakdekkende kaart op basis van peilgebieden
+
+```{r}
+library(tidyverse)
+library(HHSKwkl)
+library(readxl)
+library(sf)
+library(leaflet)
+
+theme_set(hhskthema())
+
+fys_chem <- data_online("fys_chem.rds")
+parameters <- data_online("parameters.rds")
+meetpunten <- data_online("meetpunten.rds")
+
+peilgebieden <- get_open_gisdata("peilgebieden") %>% select(pg_code = CODE, pg_naam = NAAM)
+
+meetpunten <- 
+  meetpunten %>% 
+  st_as_sf(coords = c(x = "x", y = "y"), crs = 28992, remove = FALSE) %>% 
+  st_join(peilgebieden) %>% 
+  st_drop_geometry() 
+
+plot_data <- 
+  fys_chem %>% 
+  filter(parnr == 3) %>% 
+  filter(year(datum) %in% 2016:2025) %>% 
+  left_join(meetpunten) %>% 
+  group_by(mp, pg_code, pg_naam, parnr, par) %>%
+  summarize(waarde = median(waarde)) %>%
+  group_by(pg_code, pg_naam, parnr, par) %>% 
+  summarize(waarde = median(waarde))
+
+peilgebieden %>% 
+  left_join(plot_data) %>% 
+  ggplot() +
+  geom_sf(data = ws_grens_rd, colour = grijs, fill = NA, linewidth = 1) +
+  geom_sf(aes(fill = waarde), color = grijs_l) +
+  scale_fill_distiller(na.value = NA, palette = "RdYlBu") +
+  # scale_fill_viridis_c(na.value = NA, option = "G") +
+  hhskthema_kaart() +
+  labs(title = "Fosfaat - mediaan - 2016-2025")
+  
+
+
+```
+
+## Meetlocaties in peilafwijikingen
+
+```{r}
+
+peilafwijkingen <- get_open_gisdata("peilafwijkingen")
+
+mp_afw <- 
+  meetpunten %>% 
+  st_as_sf(coords = c(x = "x", y = "y"), crs = 28992, remove = FALSE) %>% 
+  st_join(peilafwijkingen) %>% 
+  st_drop_geometry() 
+
+mp_afw %>%  
+  semi_join(filter(fys_chem, year(datum) > 2020)) %>% 
+  filter(!is.na(CODE)) %>% 
+  select(mp, mpomsch, CODE, NAAM) 
+```

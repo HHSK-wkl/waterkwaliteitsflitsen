@@ -1,0 +1,29 @@
+---
+title: "Lithium metingen"
+description: "Eerste indruk lithium"
+date: "2026-08-18"
+author: "Johan van Tent"
+code-fold: true
+image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [chemie]
+---
+
+```{r}
+library(tidyverse)
+library(HHSKwkl)
+
+theme_set(hhskthema())
+
+fys_chem <- data_online("fys_chem.rds")
+parameters <- data_online("parameters.rds")
+meetpunten <- data_online("meetpunten.rds")
+
+fys_chem %>% 
+  filter(par == "Li nf", year(datum) == 2026)
+
+```
+
+![](images/clipboard-314328449.png)

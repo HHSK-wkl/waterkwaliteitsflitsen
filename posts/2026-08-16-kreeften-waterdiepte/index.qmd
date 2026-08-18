@@ -1,0 +1,77 @@
+---
+title: "Kreeften en waterdiepte"
+description: "Is er een relatie tussen kreeften en waterdiepte?"
+author: "Johan van Tent"
+date: "2026-08-16"
+code-fold: true
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [biologie]
+---
+
+```{r}
+library(tidyverse)
+library(HHSKwkl)
+
+theme_set(hhskthema())
+
+# fys_chem <- data_online("fys_chem.rds")
+# parameters <- data_online("parameters.rds")
+meetpunten <- data_online("meetpunten.rds")
+biologie <- data_online("biologie.rds")
+biologie_kenmerken <- data_online("biologie_kenmerken.rds")
+
+waterdiepte <- data_online("biologie_kenmerken.rds") %>% 
+  filter(kenmerkcode == "WATDTE", methode == "VEG%") %>% 
+  add_jaar() %>% 
+  select(-datum, -tijd)
+
+
+biologie %>% 
+  select(-contains("stadium")) %>% 
+  distinct() %>% 
+  filter(methode == "KR12", taxatype == "MACEV") %>% 
+  add_jaar() %>% 
+  select(-datum, -tijd) %>% 
+  left_join(waterdiepte, by = join_by(mp, jaar)) %>% 
+  
+  group_by(mp, jaar) %>% 
+  summarise(n_kreeften = sum(waarde_totaal, na.rm = TRUE),
+            diepte = first(kenmerk_waarde, na_rm = TRUE)) %>% 
+  filter_out(is.na(diepte)) %>% 
+  mutate(diepte = str_replace(diepte, ",", "\\.") %>% as.numeric()) %>% 
+  ggplot(aes(diepte, n_kreeften)) +
+  geom_point() +
+  facet_wrap(~jaar) +
+  coord_cartesian(ylim = c(0, 100))
+
+
+# biologie %>% filter(methode == "KR12", taxatype == "MACEV")
+
+
+biologie %>% 
+  semi_join(filter(meetpunten, gebied == "KRIWA"), by = "mp") %>% 
+  select(-contains("stadium")) %>% 
+  distinct() %>% 
+  filter(methode == "KR12", taxatype == "MACEV") %>% 
+  add_jaar() %>% 
+  select(-datum, -tijd) %>% 
+  left_join(waterdiepte, by = join_by(mp, jaar)) %>% 
+  
+  group_by(mp, jaar) %>% 
+  summarise(n_kreeften = sum(waarde_totaal, na.rm = TRUE),
+            diepte = first(kenmerk_waarde, na_rm = TRUE)) %>% 
+  ungroup() %>% 
+  mutate(diepte = str_replace(diepte, ",", "\\.") %>% as.numeric()) %>% 
+  mutate(diepte2 = cut(diepte, c(0, 0.2, 0.4, 0.8, 3))) %>% 
+  filter_out(is.na(diepte2)) %>% 
+  ggplot(aes(diepte2, n_kreeften)) +
+  geom_boxplot() +
+  facet_wrap(~jaar, axes = "all_x") +
+  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  coord_cartesian(ylim = c(0, 100)) +
+  labs(x = "diepte in m", title = "Aantal kreeften per waterdiepte", subtitle = "Alleen krimpenerwaard")
+
+```

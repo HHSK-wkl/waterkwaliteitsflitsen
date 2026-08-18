@@ -1,0 +1,13 @@
+---
+title: "Titel"
+description: "Beschrijving"
+date: "2026-08-17"
+code-fold: true
+author: "Johan van Tent"
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+# categories: [biologie, chemie, kaart]
+---
+

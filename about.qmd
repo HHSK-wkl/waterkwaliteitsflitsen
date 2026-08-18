@@ -1,0 +1,13 @@
+---
+title: "About"
+image: images/default_veenweide.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/HHSK-wkl
+
+---
+
+About this blog
