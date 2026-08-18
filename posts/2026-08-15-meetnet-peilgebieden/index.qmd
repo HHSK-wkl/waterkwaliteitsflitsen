@@ -1,0 +1,104 @@
+---
+title: "Peilgebieden met actieve meetpunten"
+description: "Geeft het huidige meetnet voldoende dekking voor het gebied?"
+date: "2026-08-15"
+code-fold: true
+author: "Johan van Tent"
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [biologie, chemie, kaart]
+editor_options: 
+  chunk_output_type: console
+freeze: auto
+---
+
+## Dekking chemie
+
+
+
+```{r}
+library(tidyverse)
+library(HHSKwkl)
+library(readxl)
+library(sf)
+library(leaflet)
+
+theme_set(hhskthema())
+
+meetpunten <- data_online("meetpunten.rds")
+
+jaar <- 2027
+
+pad <- "../../data/tabellen_monitoringsplan_OMS-18-8-2026.xlsx"
+
+meetnetten        <- read_excel(pad, "meetnetten")             %>% 
+  filter(!is.na(meetnet_code)) %>% 
+  select(1:13)
+
+peilgebieden <- get_open_gisdata("peilgebieden") %>% select(CODE, NAAM)
+
+f_meetnetcode <- meetnetten %>% select(meetnet_nr, meetnet_code) %>% maak_opzoeker()
+
+peilgebieden_met_meetpunt <- 
+  meetnetten %>% 
+  filter(meetnet_nr < 100) %>% 
+  filter(is.na(datum_eind) | datum_eind > make_date(jaar)) %>%  
+  select(mp = meetpunt_code, meetnet_nr, meetnet_code) %>%
+  # summarise(meetnet_nr = min(meetnet_nr), .by = mp) %>% 
+  distinct() %>%
+  left_join(meetpunten) %>% 
+  st_as_sf(coords = c(x = "x", y = "y"), crs = 28992, remove = FALSE) %>% 
+  st_join(peilgebieden) %>% 
+  st_drop_geometry() %>% 
+  # select(CODE, NAAM, meetnet_nr) %>% 
+  summarise(meetnet_nr = min(meetnet_nr), .by = c(CODE, NAAM)) %>% 
+  filter_out(is.na(CODE)) %>% 
+  mutate(meetnet_code = f_meetnetcode(meetnet_nr))
+  
+pal <- colorFactor("Accent", domain = unique(peilgebieden_met_meetpunt$meetnet_code))
+
+peilgebieden %>% 
+  inner_join(peilgebieden_met_meetpunt) %>% 
+  st_transform(crs = 4326) %>% 
+  basiskaart("cartolight") %>% 
+  addPolygons(stroke = FALSE, fillOpacity = 0.8, fillColor = ~pal(meetnet_code), label = ~CODE) %>% 
+  addLegend(pal = pal, values = ~meetnet_code, opacity = 1) %>% 
+  addPolylines(data = ws_grens_wgs, color = grijs_m, opacity = 1, weight = 3)  
+  # htmlwidgets::saveWidget("C:/data/temp/dekking_chemie_peilgebieden.html")
+
+
+    
+
+```
+
+## Dekking quickscan
+
+```{r}
+
+peilgebieden_met_meetpuntqs <- 
+    
+# meetpunten_quickscan <- 
+  meetnetten %>% 
+  filter(meetnet_nr == 102) %>% 
+  filter(is.na(datum_eind) | datum_eind > make_date(jaar)) %>%  
+  select(mp = meetpunt_code, meetnet_nr, meetnet_code) %>%
+  # summarise(meetnet_nr = min(meetnet_nr), .by = mp) %>% 
+  distinct() %>%
+  left_join(meetpunten) %>% 
+  st_as_sf(coords = c(x = "x", y = "y"), crs = 28992, remove = FALSE) %>% 
+  st_join(peilgebieden) %>% 
+  st_drop_geometry() %>% 
+  select(CODE, NAAM) %>%
+  filter_out(is.na(CODE)) %>% 
+  distinct()
+
+peilgebieden %>% 
+  inner_join(peilgebieden_met_meetpuntqs) %>% 
+  st_transform(crs = 4326) %>% 
+  basiskaart("cartolight") %>% 
+  addPolygons(stroke = FALSE, fillOpacity = 0.8, label = ~CODE) %>% 
+  addPolylines(data = ws_grens_wgs, color = grijs_m, opacity = 1, weight = 3) 
+  # htmlwidgets::saveWidget("C:/data/temp/dekking_quickscan_peilgebieden.html", selfcontained = TRUE)
+```

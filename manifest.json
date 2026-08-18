@@ -4457,14 +4457,281 @@
     "_extensions/HHSK-wkl/brand_hhsk/brand/logo_wit_48px.png": {
       "checksum": "e8cb5bb6f2eb12ef92b0d1068b330987"
     },
+    "_freeze/posts/2026-08-15-meetnet-peilgebieden/index/execute-results/html.json": {
+      "checksum": "89b8cb27ad86deb4c2fc4fc9033302ce"
+    },
+    "_freeze/posts/2026-08-16-kreeften-waterdiepte/index/execute-results/html.json": {
+      "checksum": "779d19e94341636cc1c387fb656fdb3c"
+    },
+    "_freeze/posts/2026-08-16-kreeften-waterdiepte/index/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "70b6618e2754fd306e5bce2fa1dae3c7"
+    },
+    "_freeze/posts/2026-08-16-kreeften-waterdiepte/index/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "3cc52f12b07cd24bcd8b2254cb106735"
+    },
+    "_freeze/posts/2026-08-17-weergave-peilgebieden/index/execute-results/html.json": {
+      "checksum": "15825b624d2b037d0ec23cff7230106d"
+    },
+    "_freeze/posts/2026-08-17-weergave-peilgebieden/index/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "6ffc69292adbec3f26ff7a5bec04aac6"
+    },
+    "_freeze/posts/2026-08-18-lithium/index/execute-results/html.json": {
+      "checksum": "acb9875c984145d050c7dd3fa9e3e824"
+    },
+    "_freeze/site_libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "_freeze/site_libs/htmltools-fill-0.5.9/fill.css": {
+      "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
+    },
+    "_freeze/site_libs/htmlwidgets-1.6.4/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "_freeze/site_libs/jquery-3.6.0/jquery-3.6.0.js": {
+      "checksum": "2849239b95f5a9a2aea3f6ed9420bb88"
+    },
+    "_freeze/site_libs/jquery-3.6.0/jquery-3.6.0.min.js": {
+      "checksum": "8fb8fee4fcc3cc86ff6c724154c49c42"
+    },
+    "_freeze/site_libs/jquery-3.6.0/jquery-3.6.0.min.map": {
+      "checksum": "6efc5d663aaacac2024153fa0d4bafcd"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/images/layers-2x.png": {
+      "checksum": "4f0283c6ce28e888000e978e537a6a56"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/images/layers.png": {
+      "checksum": "a6137456ed160d7606981aa57c559898"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/images/marker-icon-2x.png": {
+      "checksum": "401d815dc206b8dc1b17cd0e37695975"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/images/marker-icon.png": {
+      "checksum": "2273e3d8ad9264b7daa5bdbf8e6b47f8"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/images/marker-shadow.png": {
+      "checksum": "44a526eed258222515aa21eaffd14a96"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/leaflet.css": {
+      "checksum": "58da535d4980b4c71b74a41bbee8a510"
+    },
+    "_freeze/site_libs/leaflet-1.3.1/leaflet.js": {
+      "checksum": "af438f3b0ec09c81bc8fb9959de88155"
+    },
+    "_freeze/site_libs/leaflet-binding-2.2.3/leaflet.js": {
+      "checksum": "7b0d68b050b79c5699a9f361b697b6ef"
+    },
+    "_freeze/site_libs/leaflet-providers-3.0.0/leaflet-providers.js": {
+      "checksum": "e7f9d0928e9be4a2b45732d897850a39"
+    },
+    "_freeze/site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js": {
+      "checksum": "8fb426b3cfaa7d730f3b56a104012882"
+    },
+    "_freeze/site_libs/leafletfix-1.0.0/leafletfix.css": {
+      "checksum": "6a38c873de948d8a1458ec0429aa0063"
+    },
+    "_freeze/site_libs/proj4-2.6.2/proj4.min.js": {
+      "checksum": "4c6ef5a940694e1acc5c9ef66572fa79"
+    },
+    "_freeze/site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js": {
+      "checksum": "4c72a5a790e066510f9eb68541280646"
+    },
+    "_freeze/site_libs/quarto-listing/list.min.js": {
+      "checksum": "d9fe78988e4cf7a26ac9e06aca9ce679"
+    },
+    "_freeze/site_libs/quarto-listing/quarto-listing.js": {
+      "checksum": "919f171782f2658435097266e834d316"
+    },
+    "_freeze/site_libs/rstudio_leaflet-1.3.1/images/1px.png": {
+      "checksum": "978c1bee49d7ad5fc1a4d81099b13e18"
+    },
+    "_freeze/site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css": {
+      "checksum": "49b23a276edf8677e7bb779525d2be7d"
+    },
     "_quarto.yml": {
       "checksum": "df38642f5f9c836bb41e6a8ca6f4ff4b"
+    },
+    "_site/about.html": {
+      "checksum": "059068013e1c9daeccc589c42676f0d8"
+    },
+    "_site/defaults/index.html": {
+      "checksum": "0406fdee4abdc7b8e755f87d4944854a"
+    },
+    "_site/images/default_veenweide.jpg": {
+      "checksum": "203466f7e155187aca497f4611ee633b"
+    },
+    "_site/index.html": {
+      "checksum": "f5a90fb2006a1d136962f31e1dc33f42"
+    },
+    "_site/listings.json": {
+      "checksum": "16e42c0e28feac1c9ede90d63f2b86dc"
+    },
+    "_site/posts/2026-08-15-meetnet-peilgebieden/index.html": {
+      "checksum": "6c78a4c807b5d47d0f4cf980fe08d8b5"
+    },
+    "_site/posts/2026-08-16-kreeften-waterdiepte/index.html": {
+      "checksum": "8df6e55e404a9c61a8bedb2b9ef25760"
+    },
+    "_site/posts/2026-08-16-kreeften-waterdiepte/index_files/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "70b6618e2754fd306e5bce2fa1dae3c7"
+    },
+    "_site/posts/2026-08-16-kreeften-waterdiepte/index_files/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "3cc52f12b07cd24bcd8b2254cb106735"
+    },
+    "_site/posts/2026-08-17-weergave-peilgebieden/index.html": {
+      "checksum": "6aceffddebac6d8d0e3c02e798ed4047"
+    },
+    "_site/posts/2026-08-17-weergave-peilgebieden/index_files/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "6ffc69292adbec3f26ff7a5bec04aac6"
+    },
+    "_site/posts/2026-08-18-lithium/images/clipboard-314328449.png": {
+      "checksum": "2871d481ce8053693cadbabcd39d5911"
+    },
+    "_site/posts/2026-08-18-lithium/index.html": {
+      "checksum": "b5032cc327fbcf51d730c5ff42d6e145"
+    },
+    "_site/search.json": {
+      "checksum": "41120512096fc0e2ceb02cfc84f42ec9"
+    },
+    "_site/site_libs/bootstrap/bootstrap-da425195690ef2aa76dbf5255c9620f9.min.css": {
+      "checksum": "da425195690ef2aa76dbf5255c9620f9"
+    },
+    "_site/site_libs/bootstrap/bootstrap-dark-3dd8dd4fa973b0c847fa2b3191a58c6a.min.css": {
+      "checksum": "3dd8dd4fa973b0c847fa2b3191a58c6a"
+    },
+    "_site/site_libs/bootstrap/bootstrap-icons.css": {
+      "checksum": "886da841d7421705f715f600c5ff11bb"
+    },
+    "_site/site_libs/bootstrap/bootstrap-icons.woff": {
+      "checksum": "efe54401ef52214fd3b701e23ff88c5f"
+    },
+    "_site/site_libs/bootstrap/bootstrap.min.js": {
+      "checksum": "e2b09c06f0e714b6144a6788a28e3950"
+    },
+    "_site/site_libs/clipboard/clipboard.min.js": {
+      "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "_site/site_libs/htmltools-fill-0.5.9/fill.css": {
+      "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
+    },
+    "_site/site_libs/htmlwidgets-1.6.4/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "_site/site_libs/jquery-3.6.0/jquery-3.6.0.js": {
+      "checksum": "2849239b95f5a9a2aea3f6ed9420bb88"
+    },
+    "_site/site_libs/jquery-3.6.0/jquery-3.6.0.min.js": {
+      "checksum": "8fb8fee4fcc3cc86ff6c724154c49c42"
+    },
+    "_site/site_libs/jquery-3.6.0/jquery-3.6.0.min.map": {
+      "checksum": "6efc5d663aaacac2024153fa0d4bafcd"
+    },
+    "_site/site_libs/leaflet-1.3.1/images/layers-2x.png": {
+      "checksum": "4f0283c6ce28e888000e978e537a6a56"
+    },
+    "_site/site_libs/leaflet-1.3.1/images/layers.png": {
+      "checksum": "a6137456ed160d7606981aa57c559898"
+    },
+    "_site/site_libs/leaflet-1.3.1/images/marker-icon-2x.png": {
+      "checksum": "401d815dc206b8dc1b17cd0e37695975"
+    },
+    "_site/site_libs/leaflet-1.3.1/images/marker-icon.png": {
+      "checksum": "2273e3d8ad9264b7daa5bdbf8e6b47f8"
+    },
+    "_site/site_libs/leaflet-1.3.1/images/marker-shadow.png": {
+      "checksum": "44a526eed258222515aa21eaffd14a96"
+    },
+    "_site/site_libs/leaflet-1.3.1/leaflet.css": {
+      "checksum": "58da535d4980b4c71b74a41bbee8a510"
+    },
+    "_site/site_libs/leaflet-1.3.1/leaflet.js": {
+      "checksum": "af438f3b0ec09c81bc8fb9959de88155"
+    },
+    "_site/site_libs/leaflet-binding-2.2.3/leaflet.js": {
+      "checksum": "7b0d68b050b79c5699a9f361b697b6ef"
+    },
+    "_site/site_libs/leaflet-providers-3.0.0/leaflet-providers.js": {
+      "checksum": "e7f9d0928e9be4a2b45732d897850a39"
+    },
+    "_site/site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js": {
+      "checksum": "8fb426b3cfaa7d730f3b56a104012882"
+    },
+    "_site/site_libs/leafletfix-1.0.0/leafletfix.css": {
+      "checksum": "6a38c873de948d8a1458ec0429aa0063"
+    },
+    "_site/site_libs/proj4-2.6.2/proj4.min.js": {
+      "checksum": "4c6ef5a940694e1acc5c9ef66572fa79"
+    },
+    "_site/site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js": {
+      "checksum": "4c72a5a790e066510f9eb68541280646"
+    },
+    "_site/site_libs/quarto-contrib/quarto-project/HHSK-wkl/brand_hhsk/brand/logo_kleur_48px.png": {
+      "checksum": "816f1760d8ca6cd340973f36a2e140f4"
+    },
+    "_site/site_libs/quarto-contrib/quarto-project/HHSK-wkl/brand_hhsk/brand/logo_wit.png": {
+      "checksum": "3dce644cc65389a296d5610f59a48599"
+    },
+    "_site/site_libs/quarto-html/anchor.min.js": {
+      "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
+    },
+    "_site/site_libs/quarto-html/popper.min.js": {
+      "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
+    },
+    "_site/site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css": {
+      "checksum": "15634bcf2e68342d4ad2dfa704d543f6"
+    },
+    "_site/site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css": {
+      "checksum": "0a6b7249c26820e032cb0bd839ff02b1"
+    },
+    "_site/site_libs/quarto-html/quarto.js": {
+      "checksum": "6f4245742deb3cc92337dbe2701ccfe1"
+    },
+    "_site/site_libs/quarto-html/tabsets/tabsets.js": {
+      "checksum": "e8d6a8862b33ccc461f8fd532e05b365"
+    },
+    "_site/site_libs/quarto-html/tippy.css": {
+      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
+    },
+    "_site/site_libs/quarto-html/tippy.umd.min.js": {
+      "checksum": "d828775275749701b48bd9d958814111"
+    },
+    "_site/site_libs/quarto-listing/list.min.js": {
+      "checksum": "d9fe78988e4cf7a26ac9e06aca9ce679"
+    },
+    "_site/site_libs/quarto-listing/quarto-listing.js": {
+      "checksum": "919f171782f2658435097266e834d316"
+    },
+    "_site/site_libs/quarto-nav/headroom.min.js": {
+      "checksum": "ace0360e576db9b6e7df48ac68ddbbf4"
+    },
+    "_site/site_libs/quarto-nav/quarto-nav.js": {
+      "checksum": "12d334846b27bdb493298c08277bdf7f"
+    },
+    "_site/site_libs/quarto-search/autocomplete.umd.js": {
+      "checksum": "b514204f2ef1ca7a8e2ad4579d263504"
+    },
+    "_site/site_libs/quarto-search/fuse.min.js": {
+      "checksum": "de7d60e4a6881074275feca14b84a49d"
+    },
+    "_site/site_libs/quarto-search/quarto-search.js": {
+      "checksum": "9c992af743ca88c8c5f650cf312c4e61"
+    },
+    "_site/site_libs/rstudio_leaflet-1.3.1/images/1px.png": {
+      "checksum": "978c1bee49d7ad5fc1a4d81099b13e18"
+    },
+    "_site/site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css": {
+      "checksum": "49b23a276edf8677e7bb779525d2be7d"
+    },
+    "_site/styles.css": {
+      "checksum": "e31c3cdea03dfab8a29456978017bd10"
     },
     "about.qmd": {
       "checksum": "5b045f10eedbed79bb7b74f4441dd81f"
     },
+    "data/tabellen_monitoringsplan_OMS-18-8-2026.xlsx": {
+      "checksum": "07aea20c527b3d47c72c575d050ee13f"
+    },
     "defaults/index.qmd": {
-      "checksum": "9d43f93e243a85f3a241d0e60bb396ad"
+      "checksum": "3b8718eec5d78c6355a72ee93837b1d2"
     },
     "images/default_veenweide.jpg": {
       "checksum": "203466f7e155187aca497f4611ee633b"
@@ -4474,6 +4741,9 @@
     },
     "posts/_metadata.yml": {
       "checksum": "8bcb6b29f0a2436c347a042c69ef43a5"
+    },
+    "posts/2026-08-15-meetnet-peilgebieden/index.qmd": {
+      "checksum": "99c842953e144d8751d61987173987e7"
     },
     "posts/2026-08-16-kreeften-waterdiepte/index.qmd": {
       "checksum": "8f700d0a143f106907e73acaa76f20bc"
@@ -4488,7 +4758,7 @@
       "checksum": "a4c08baac3b5347597bd173dbaefd047"
     },
     "README.md": {
-      "checksum": "4c18c6cdc9e0f0f595076e26c6ee6719"
+      "checksum": "baaac1d4a68e92ce4c8098cf710eadb9"
     },
     "styles.css": {
       "checksum": "e31c3cdea03dfab8a29456978017bd10"
