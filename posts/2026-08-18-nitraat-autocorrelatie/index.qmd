@@ -1,0 +1,65 @@
+---
+title: "Autocorrelatie nitraatmetingen"
+description: "Welke meetfrequentie geeft nog extra informatie"
+date: "2026-08-18"
+code-fold: show
+author: "Johan van Tent"
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [chemie]
+freeze: auto
+---
+
+De metingen zijn afkomstig van de nitraatmeter - meetpunt S_0633
+
+```{r}
+library(tidyverse)
+library(HHSKwkl)
+library(timetk)
+
+theme_set(hhskthema())
+
+nitraat <- 
+  read_csv("../../data/nitraat.csv") %>% 
+  select(datum = Date, waarde = Value)
+
+
+nitraat %>% 
+  timetk::tk_acf_diagnostics(.date_var = datum, .value = waarde, .lags = 5)
+  # timetk::plot_acf_diagnostics(.date_var = datum, .value = waarde, .lags = 50) 
+
+nitraat_acf <- function(interval = "1 hour"){
+  nitraat %>% 
+    mutate(datum = floor_date(datum, interval)) %>%
+    summarise(waarde = first(waarde), .by = datum) %>%
+    timetk::tk_acf_diagnostics(.date_var = datum, .value = waarde, .lags = 5)
+    # timetk::plot_acf_diagnostics(.date_var = datum, .value = waarde, .lags = 50)
+}
+
+nitraat_acf("20 minutes")
+nitraat_acf("30 minutes")
+nitraat_acf("40 minutes")
+nitraat_acf("1 hour")
+nitraat_acf("2 hour")
+nitraat_acf("3 hour")
+nitraat_acf("4 hour")
+nitraat_acf("6 hour")
+nitraat_acf("8 hour")
+nitraat_acf("12 hour")
+nitraat_acf("1 day")
+nitraat_acf("2 day")
+nitraat_acf("3 day")
+nitraat_acf("4 day")
+nitraat_acf("5 day")
+nitraat_acf("6 day")
+nitraat_acf("7 day")
+nitraat_acf("8 day")
+nitraat_acf("14 day")
+nitraat_acf("21 day")
+nitraat_acf("28 day")
+
+
+
+```
