@@ -1,0 +1,65 @@
+---
+title: "Trends in bestrijdingsmiddelen"
+description: "Mann-Kendall Trendtest voor aangetroffen GBM"
+date: "2026-08-25"
+code-fold: true
+author: "Johan van Tent"
+lightbox: true
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [chemie]
+freeze: auto
+---
+
+Gebruik een Mann-Kendall test om trends voor alle GBM op een meetpunt te bepalen. De detectiegrenswaarden zijn weggefilterd.
+
+```{r}
+#| fig-width: 20
+#| fig-height: 12
+library(tidyverse)
+library(HHSKwkl)
+library(glue)
+
+theme_set(hhskthema())
+
+fys_chem <- data_online("fys_chem.rds")
+
+fys_chem %>% 
+  filter(mp == "S_1226",
+         is.na(detectiegrens),
+         parnr > 999, parnr < 2000,
+         year(datum) > 2016) %>% 
+  group_by(mp, parnr, par, eenheid) %>% 
+  filter(n() > 2) %>% 
+  nest() %>% 
+  mutate(sen = map(data, ~trend::sens.slope(.x$waarde)),
+         helling = map_dbl(sen, "estimates"),
+         p_value = map_dbl(sen, "p.value")) %>%
+  mutate(kans =  round(1 / p_value, digits = 2),
+         p_value = round(p_value, digits = 4),
+         helling = round(helling, digits = 5)) %>%
+  # filter(p_value < 0.05) %>%
+  arrange(kans) %>% 
+  mutate(trend = case_when(
+    p_value > 0.05 ~ "Geen verandering",
+    helling < 0 ~ "Afname",
+    helling > 0 ~ "Toename",
+  )) %>% 
+  select(-data, -sen) %>% 
+  DT::datatable()
+
+fys_chem %>% 
+  filter(mp == "S_1226",
+         is.na(detectiegrens),
+         parnr > 999, parnr < 2000,
+         year(datum) > 2016) %>% 
+  group_by(mp, parnr, par, eenheid) %>% 
+  filter(n() > 2) %>% 
+  ungroup() %>% 
+  ggplot(aes(datum, waarde)) + geom_point() + geom_line() +
+  facet_wrap(~par, scales = "free_y")
+
+
+```
