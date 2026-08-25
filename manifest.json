@@ -81,6 +81,39 @@
         "RemoteSha": "1.3.0"
       }
     },
+    "DT": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Type": "Package",
+        "Package": "DT",
+        "Title": "A Wrapper of the JavaScript Library 'DataTables'",
+        "Version": "0.34.0",
+        "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", role = \"aut\"),\n    person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"),\n    person(\"Xianying\", \"Tan\", role = \"aut\"),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"JJ\", \"Allaire\", role = \"ctb\"),\n    person(\"Maximilian\", \"Girlich\", role = \"ctb\"),\n    person(\"Greg\", \"Freedman Ellis\", role = \"ctb\"),\n    person(\"Johannes\", \"Rauh\", role = \"ctb\"),\n    person(\"SpryMedia Limited\", role = c(\"ctb\", \"cph\"),\n           comment = \"DataTables in htmlwidgets/lib\"),\n    person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"),\n           comment = \"selectize.js in htmlwidgets/lib\"),\n    person(\"Leon\", \"Gersen\", role = c(\"ctb\", \"cph\"),\n           comment = \"noUiSlider in htmlwidgets/lib\"),\n    person(\"Bartek\", \"Szopka\", role = c(\"ctb\", \"cph\"),\n           comment = \"jquery.highlight.js in htmlwidgets/lib\"),\n    person(\"Alex\", \"Pickering\", role = \"ctb\"),\n    person(\"William\", \"Holmes\", role = \"ctb\"),\n    person(\"Mikko\", \"Marttila\", role = \"ctb\"),\n    person(\"Andres\", \"Quintero\", role = \"ctb\"),\n    person(\"Stéphane\", \"Laurent\", role = \"ctb\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Data objects in R can be rendered as HTML tables using the\n    JavaScript library 'DataTables' (typically via R Markdown or Shiny).\n    The 'DataTables' library has been included in this R package. The\n    package name 'DT' is an abbreviation of 'DataTables'.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/DT",
+        "BugReports": "https://github.com/rstudio/DT/issues",
+        "Imports": "crosstalk, htmltools (>= 0.3.6), htmlwidgets (>= 1.3),\njquerylib, jsonlite (>= 0.9.16), magrittr, promises",
+        "Suggests": "bslib, future, httpuv, knitr (>= 1.8), rmarkdown, shiny (>=\n1.6), testit, tibble",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-09-02 13:12:27 UTC; garrick",
+        "Author": "Yihui Xie [aut],\n  Joe Cheng [aut],\n  Xianying Tan [aut],\n  Garrick Aden-Buie [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-7111-0077>),\n  JJ Allaire [ctb],\n  Maximilian Girlich [ctb],\n  Greg Freedman Ellis [ctb],\n  Johannes Rauh [ctb],\n  SpryMedia Limited [ctb, cph] (DataTables in htmlwidgets/lib),\n  Brian Reavis [ctb, cph] (selectize.js in htmlwidgets/lib),\n  Leon Gersen [ctb, cph] (noUiSlider in htmlwidgets/lib),\n  Bartek Szopka [ctb, cph] (jquery.highlight.js in htmlwidgets/lib),\n  Alex Pickering [ctb],\n  William Holmes [ctb],\n  Mikko Marttila [ctb],\n  Andres Quintero [ctb],\n  Stéphane Laurent [ctb],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Garrick Aden-Buie <garrick@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-09-02 22:00:06 UTC",
+        "Built": "R 4.6.0; ; 2026-06-22 11:31:27 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "DT",
+        "RemoteRef": "DT",
+        "RemoteRepos": "https://cran.rstudio.com/",
+        "RemotePkgPlatform": "i386+x86_64-w64-mingw32",
+        "RemoteSha": "0.34.0"
+      }
+    },
     "HHSKwkl": {
       "Source": "github",
       "Repository": null,
@@ -1562,6 +1595,42 @@
         "RemoteRef": "evaluate",
         "RemoteRepos": "https://cran.rstudio.com",
         "RemoteSha": "1.0.5"
+      }
+    },
+    "extraDistr": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "extraDistr",
+        "Type": "Package",
+        "Title": "Additional Univariate and Multivariate Distributions",
+        "Version": "1.10.0.4",
+        "Date": "2026-05-18",
+        "Authors@R": "c(person(given  = \"Tymoteusz\",\n                    family = \"Wolodzko\",\n                    role   = \"aut\",\n                    email  = \"twolodzko+extradistr@gmail.com\"),\n             person(given  = \"Sigbert\",\n                    family = \"Klinke\",\n                    role   = \"cre\",\n                    email  = \"sigbert@wiwi.hu-berlin.de\"),\n             person(given  = \"Thomas\",\n                    family = \"Farrar\",\n                    role   = \"ctb\",\n                    email  = \"FarrarT@cput.ac.za\")\n            )",
+        "Description": "Density, distribution function, quantile function\n    and random generation for a number of univariate\n    and multivariate distributions. This package implements the\n    following distributions: Bernoulli, beta-binomial, beta-negative\n    binomial, beta prime, Bhattacharjee, Birnbaum-Saunders,\n    bivariate normal, bivariate Poisson, categorical, Dirichlet,\n    Dirichlet-multinomial, discrete gamma, discrete Laplace,\n    discrete normal, discrete uniform, discrete Weibull, Frechet,\n    gamma-Poisson, generalized extreme value, Gompertz,\n    generalized Pareto, Gumbel, half-Cauchy, half-normal, half-t,\n    Huber density, inverse chi-squared, inverse-gamma, Kumaraswamy,\n    Laplace, location-scale t, logarithmic, Lomax, multivariate\n    hypergeometric, multinomial, negative hypergeometric,\n    non-standard beta, normal mixture, Poisson mixture, Pareto,\n    power, reparametrized beta, Rayleigh, shifted Gompertz, Skellam,\n    slash, triangular, truncated binomial, truncated normal,\n    truncated Poisson, Tukey lambda, Wald, zero-inflated binomial,\n    zero-inflated negative binomial, zero-inflated Poisson.",
+        "License": "GPL-2",
+        "URL": "https://github.com/sigbertklinke/extraDistr",
+        "Encoding": "UTF-8",
+        "Depends": "R (>= 3.1.0)",
+        "LinkingTo": "Rcpp, RcppArmadillo",
+        "Imports": "Rcpp",
+        "Suggests": "testthat, LaplacesDemon, VGAM, evd, skellam, triangle, actuar",
+        "NeedsCompilation": "yes",
+        "Config/roxygen2/version": "8.0.0",
+        "RoxygenNote": "7.3.3",
+        "Packaged": "2026-05-18 08:48:53 UTC; sigbert",
+        "Author": "Tymoteusz Wolodzko [aut],\n  Sigbert Klinke [cre],\n  Thomas Farrar [ctb]",
+        "Maintainer": "Sigbert Klinke <sigbert@wiwi.hu-berlin.de>",
+        "Repository": "CRAN",
+        "Date/Publication": "2026-05-18 10:30:07 UTC",
+        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-06-22 10:13:05 UTC; windows",
+        "Archs": "x64",
+        "RemoteType": "standard",
+        "RemotePkgRef": "extraDistr",
+        "RemoteRef": "extraDistr",
+        "RemoteRepos": "https://cran.rstudio.com/",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "1.10.0.4"
       }
     },
     "farver": {
@@ -5391,6 +5460,40 @@
         "RemoteSha": "0.60"
       }
     },
+    "trend": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "trend",
+        "Version": "1.1.6",
+        "Date": "2023-10-10",
+        "Title": "Non-Parametric Trend Tests and Change-Point Detection",
+        "Authors@R": "person(given = \"Thorsten\", family = \"Pohlert\",\n                 email = \"thorsten.pohlert@gmx.de\",\n                 comment = c(ORCID = \"0000-0003-3855-3025\"),\n                 role = c(\"aut\", \"cre\"))",
+        "Depends": "R (>= 3.0)",
+        "Description": "The analysis of environmental data often requires\n\t     the detection of trends and change-points. \n\t     This package includes tests for trend detection\n\t     (Cox-Stuart Trend Test, Mann-Kendall Trend Test, \n\t     (correlated) Hirsch-Slack Test,\n             partial Mann-Kendall Trend Test, multivariate (multisite)\n\t     Mann-Kendall Trend Test, (Seasonal) Sen's slope, \n\t     partial Pearson and Spearman correlation trend test),\n             change-point detection (Lanzante's test procedures, \n\t     Pettitt's test, Buishand Range Test,\n\t     Buishand U Test, Standard Normal Homogeinity Test),\n\t     detection of non-randomness (Wallis-Moore Phase Frequency Test,\n\t     Bartels rank von Neumann's ratio test, Wald-Wolfowitz Test)\n\t     and the two sample Robust Rank-Order Distributional Test.",
+        "Imports": "extraDistr (>= 1.8.0)",
+        "Suggests": "strucchange, Kendall, psych, datasets",
+        "Classification/MSC-2010": "62F03, 62G10, 62M10, 62P12",
+        "License": "GPL-3",
+        "Encoding": "UTF-8",
+        "ZipData": "yes",
+        "NeedsCompilation": "yes",
+        "RoxygenNote": "7.2.2",
+        "Packaged": "2023-10-10 07:57:22 UTC; thorsten",
+        "Author": "Thorsten Pohlert [aut, cre] (<https://orcid.org/0000-0003-3855-3025>)",
+        "Maintainer": "Thorsten Pohlert <thorsten.pohlert@gmx.de>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-10-10 08:50:02 UTC",
+        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-06-22 10:34:06 UTC; windows",
+        "Archs": "x64",
+        "RemoteType": "standard",
+        "RemotePkgRef": "trend",
+        "RemoteRef": "trend",
+        "RemoteRepos": "https://cran.rstudio.com/",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "1.1.6"
+      }
+    },
     "tseries": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -6053,6 +6156,12 @@
     }
   },
   "files": {
+    ".quartoignore": {
+      "checksum": "a4a918a45181164207929d52aec36aec"
+    },
+    "_defaults/index.qmd": {
+      "checksum": "3b8718eec5d78c6355a72ee93837b1d2"
+    },
     "_extensions/HHSK-wkl/brand_hhsk/_extension.yml": {
       "checksum": "c4e3434551532212fe13637f3624e128"
     },
@@ -6098,6 +6207,12 @@
     "_freeze/posts/2026-08-18-nitraat-autocorrelatie/index/execute-results/html.json": {
       "checksum": "fe197b87c18b521b91ec2e16643f63e5"
     },
+    "_freeze/posts/2026-08-25-trend-gbm/index/execute-results/html.json": {
+      "checksum": "6557e5732bf2a8e3e5a0d0f574b94b8f"
+    },
+    "_freeze/posts/2026-08-25-trend-gbm/index/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "075f81276b7c4b14bc62eec5deccee30"
+    },
     "_freeze/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
     },
@@ -6118,6 +6233,21 @@
     },
     "_freeze/site_libs/crosstalk-1.2.2/scss/crosstalk.scss": {
       "checksum": "e5410240dcb4f51691eab5f9a62720d7"
+    },
+    "_freeze/site_libs/datatables-binding-0.34.0/datatables.js": {
+      "checksum": "db3ceae0e42b955595a5ce4974291aa7"
+    },
+    "_freeze/site_libs/datatables-css-0.0.0/datatables-crosstalk.css": {
+      "checksum": "d8b3c70e6451e656f1fa231e2bf97ced"
+    },
+    "_freeze/site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css": {
+      "checksum": "704b5e060968ac06041f9b2d9ee545b5"
+    },
+    "_freeze/site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css": {
+      "checksum": "e3621690205662b3f96746d73a0fe4b2"
+    },
+    "_freeze/site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js": {
+      "checksum": "44e877882207ee93b9d9d17dd0e11c87"
     },
     "_freeze/site_libs/htmltools-fill-0.5.9/fill.css": {
       "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
@@ -6210,28 +6340,31 @@
       "checksum": "4db25a9ed5c5fcf2dd1746f27be2ef39"
     },
     "_quarto.yml": {
-      "checksum": "df38642f5f9c836bb41e6a8ca6f4ff4b"
+      "checksum": "d29c9188d54899e0905eb0f43075a86e"
     },
     "_site/about.html": {
-      "checksum": "059068013e1c9daeccc589c42676f0d8"
-    },
-    "_site/defaults/index.html": {
-      "checksum": "0406fdee4abdc7b8e755f87d4944854a"
+      "checksum": "aa97da46dbd6e8cb1db3a72fc101e90b"
     },
     "_site/images/default_veenweide.jpg": {
       "checksum": "203466f7e155187aca497f4611ee633b"
     },
     "_site/index.html": {
-      "checksum": "b5619d48a17b85f87b4253a7b1b77b57"
+      "checksum": "f88496fc0ccd056d96437a2327c0dabf"
+    },
+    "_site/index.knit.html": {
+      "checksum": "7cda7473a0b4d48fadf3607ec97a1dc4"
+    },
+    "_site/index_files/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "b81d563faa4d4bcc87754df47a63afd6"
     },
     "_site/listings.json": {
-      "checksum": "b0cb78bec174adac78159460f2618275"
+      "checksum": "e0f7b93a1b9ce221c372191446fe8339"
     },
     "_site/posts/2026-08-15-meetnet-peilgebieden/index.html": {
-      "checksum": "6c78a4c807b5d47d0f4cf980fe08d8b5"
+      "checksum": "43c7c7aaac61137fde7a3a039e38584b"
     },
     "_site/posts/2026-08-16-kreeften-waterdiepte/index.html": {
-      "checksum": "8df6e55e404a9c61a8bedb2b9ef25760"
+      "checksum": "7289f7c7df16c0870ac8fbbbf95f15a6"
     },
     "_site/posts/2026-08-16-kreeften-waterdiepte/index_files/figure-html/unnamed-chunk-1-1.png": {
       "checksum": "70b6618e2754fd306e5bce2fa1dae3c7"
@@ -6240,7 +6373,7 @@
       "checksum": "3cc52f12b07cd24bcd8b2254cb106735"
     },
     "_site/posts/2026-08-17-weergave-peilgebieden/index.html": {
-      "checksum": "6aceffddebac6d8d0e3c02e798ed4047"
+      "checksum": "102d04437d2c880025011657c68253cf"
     },
     "_site/posts/2026-08-17-weergave-peilgebieden/index_files/figure-html/unnamed-chunk-1-1.png": {
       "checksum": "6ffc69292adbec3f26ff7a5bec04aac6"
@@ -6249,19 +6382,25 @@
       "checksum": "2871d481ce8053693cadbabcd39d5911"
     },
     "_site/posts/2026-08-18-lithium/index.html": {
-      "checksum": "b5032cc327fbcf51d730c5ff42d6e145"
+      "checksum": "f9da2edfa3d094a366646d4c602c2c0b"
     },
     "_site/posts/2026-08-18-nitraat-autocorrelatie/index.html": {
-      "checksum": "a75e48c51f2f2705c805926d47a9cb10"
+      "checksum": "05a6ff3bae3697561badd447509a3c53"
+    },
+    "_site/posts/2026-08-25-trend-gbm/index.html": {
+      "checksum": "ebbe65cd221ac11d10be51c09543255d"
+    },
+    "_site/posts/2026-08-25-trend-gbm/index_files/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "075f81276b7c4b14bc62eec5deccee30"
     },
     "_site/search.json": {
-      "checksum": "7de5729d5cee2ad5f9bbdf8e69e48657"
+      "checksum": "123674c8ca7440bad28fd6719844ec90"
     },
-    "_site/site_libs/bootstrap/bootstrap-da425195690ef2aa76dbf5255c9620f9.min.css": {
-      "checksum": "da425195690ef2aa76dbf5255c9620f9"
+    "_site/site_libs/bootstrap/bootstrap-6c399f44800f217e54139a7966ba4c3a.min.css": {
+      "checksum": "6c399f44800f217e54139a7966ba4c3a"
     },
-    "_site/site_libs/bootstrap/bootstrap-dark-3dd8dd4fa973b0c847fa2b3191a58c6a.min.css": {
-      "checksum": "3dd8dd4fa973b0c847fa2b3191a58c6a"
+    "_site/site_libs/bootstrap/bootstrap-dark-3945dd0fb44e250d0ac083752db49d16.min.css": {
+      "checksum": "3945dd0fb44e250d0ac083752db49d16"
     },
     "_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "886da841d7421705f715f600c5ff11bb"
@@ -6292,6 +6431,21 @@
     },
     "_site/site_libs/crosstalk-1.2.2/scss/crosstalk.scss": {
       "checksum": "e5410240dcb4f51691eab5f9a62720d7"
+    },
+    "_site/site_libs/datatables-binding-0.34.0/datatables.js": {
+      "checksum": "db3ceae0e42b955595a5ce4974291aa7"
+    },
+    "_site/site_libs/datatables-css-0.0.0/datatables-crosstalk.css": {
+      "checksum": "d8b3c70e6451e656f1fa231e2bf97ced"
+    },
+    "_site/site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css": {
+      "checksum": "704b5e060968ac06041f9b2d9ee545b5"
+    },
+    "_site/site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css": {
+      "checksum": "e3621690205662b3f96746d73a0fe4b2"
+    },
+    "_site/site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js": {
+      "checksum": "44e877882207ee93b9d9d17dd0e11c87"
     },
     "_site/site_libs/htmltools-fill-0.5.9/fill.css": {
       "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
@@ -6368,6 +6522,15 @@
     "_site/site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js": {
       "checksum": "4c72a5a790e066510f9eb68541280646"
     },
+    "_site/site_libs/quarto-contrib/glightbox/glightbox.min.css": {
+      "checksum": "9b438b29cef1c212d1c65a877ffc7232"
+    },
+    "_site/site_libs/quarto-contrib/glightbox/glightbox.min.js": {
+      "checksum": "2b4c8cbaade24ecb58bcb0d89694ccee"
+    },
+    "_site/site_libs/quarto-contrib/glightbox/lightbox.css": {
+      "checksum": "aeee60b3000dd0cfd24fea7e4a62aee7"
+    },
     "_site/site_libs/quarto-contrib/quarto-project/HHSK-wkl/brand_hhsk/brand/logo_kleur_48px.png": {
       "checksum": "816f1760d8ca6cd340973f36a2e140f4"
     },
@@ -6440,14 +6603,14 @@
     "data/tabellen_monitoringsplan_OMS-18-8-2026.xlsx": {
       "checksum": "07aea20c527b3d47c72c575d050ee13f"
     },
-    "defaults/index.qmd": {
-      "checksum": "3b8718eec5d78c6355a72ee93837b1d2"
-    },
     "images/default_veenweide.jpg": {
       "checksum": "203466f7e155187aca497f4611ee633b"
     },
     "index.qmd": {
       "checksum": "31a5a9257c072454fdd305d08a8c1f76"
+    },
+    "index_files/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "b81d563faa4d4bcc87754df47a63afd6"
     },
     "posts/_metadata.yml": {
       "checksum": "8bcb6b29f0a2436c347a042c69ef43a5"
@@ -6469,6 +6632,9 @@
     },
     "posts/2026-08-18-nitraat-autocorrelatie/index.qmd": {
       "checksum": "e1734738ae4a5659e3f619589497c730"
+    },
+    "posts/2026-08-25-trend-gbm/index.qmd": {
+      "checksum": "c7ee0f781f514003e82deb90d43d5852"
     },
     "README.md": {
       "checksum": "baaac1d4a68e92ce4c8098cf710eadb9"

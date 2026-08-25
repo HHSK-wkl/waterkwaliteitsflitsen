@@ -13,11 +13,26 @@ website:
         href: https://github.com/HHSK-wkl
 format:
   html:
+    link-external-newwindow: true
+    grid:
+      body-width: 900px
     theme:
-      - cosmo
-      - brand
+      light:
+        - cosmo
+        - brand
+      dark:
+        - cosmo
+        - brand
     css: styles.css
 
 editor: visual
 
 lang: nl
+
+fig-dpi: 150
+fig-width: 8
+fig-height: 5
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+    
