@@ -4,6 +4,7 @@ description: "Beschrijving"
 date: today
 code-fold: true
 author: "Johan van Tent"
+lightbox: true
 # image: "../../images/default_veenweide.jpg"
 execute: 
   warning: false
