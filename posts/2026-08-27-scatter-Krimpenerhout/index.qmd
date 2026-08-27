@@ -1,0 +1,45 @@
+---
+title: "Scatterplots Krimpenerhout"
+description: "Beschrijving"
+date: today
+code-fold: true
+lightbox: true
+author: "Johan van Tent"
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+# categories: [biologie, chemie, kaart]
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| fig-width: 20
+#| fig-height: 12
+
+library(tidyverse)
+library(HHSKwkl)
+library(glue)
+
+# library(sf)
+# library(leaflet)
+
+theme_set(hhskthema())
+
+fys_chem <- data_online("fys_chem.rds")
+parameters <- data_online("parameters.rds")
+meetpunten <- data_online("meetpunten.rds")
+
+fys_chem %>% 
+  filter(mp == "K_1102") %>% 
+  filter(year(datum) > 2019) %>% 
+  filter(parnr %in% c(1, 3, 7, 8, 15, 415)) %>% 
+  summarise(waarde = mean(waarde), .by = c(mp, par, datum)) %>% 
+  pivot_wider(names_from = par, values_from = waarde) %>% 
+  # select(-mp, -datum) %>% 
+  GGally::ggpairs() 
+
+
+
+```
