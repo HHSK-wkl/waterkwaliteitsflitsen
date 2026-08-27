@@ -1,5 +1,7 @@
 project:
   type: website
+  post-render: "R/write_manifest.R"
+    
 
 website:
   description: "Diverse waterkwaliteitsanalyses HHSK"
