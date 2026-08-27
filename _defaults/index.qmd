@@ -1,7 +1,7 @@
 ---
 title: "Titel"
 description: "Beschrijving"
-date: "2026-08-17"
+date: today
 code-fold: true
 author: "Johan van Tent"
 # image: "../../images/default_veenweide.jpg"
