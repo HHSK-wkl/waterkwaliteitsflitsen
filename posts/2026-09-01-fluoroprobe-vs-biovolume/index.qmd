@@ -1,0 +1,20 @@
+---
+title: "Fluoroprobe vs biovolume"
+description: "Met de fluoroprobe wordt de hoeveelheid blauwalg structureel hoger ingeschat dan met biovolume."
+date: 2026-09-01
+code-fold: true
+author: "Johan van Tent"
+lightbox: true
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [zwemwater]
+freeze: auto
+---
+
+```{r}
+#| fig-width: 10
+#| fig-height: 8
+#| file: "code_fluoroprobe_vs_biovolume.R"
+```

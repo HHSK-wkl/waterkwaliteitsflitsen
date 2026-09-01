@@ -1,0 +1,21 @@
+---
+title: "Ontwikkeling blauwalgtaxa Krimpenerhout"
+description: "Wat is de samenstelling van de aanwezige taxa"
+date: 2026-08-31
+code-fold: true
+author: "Johan van Tent"
+lightbox: true
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+  freeze: auto
+categories: [biologie, zwemwater]
+---
+
+```{r}
+#| file: code_blauwalg_plot.R
+#| fig-width: 12
+#| fig-height: 9
+
+```

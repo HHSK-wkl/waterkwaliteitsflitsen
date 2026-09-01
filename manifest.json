@@ -162,35 +162,35 @@
         "Package": "HHSKwkl",
         "Type": "Package",
         "Title": "Functies HHSK Waterkwaliteit",
-        "Version": "0.5.2.9000",
+        "Version": "0.5.2.9002",
         "Authors@R": "person(\"Johan\", \"van Tent\", email = \"j.van.tent@hhsk.nl\", \n    role = c(\"aut\", \"cre\"))",
         "Description": "Functies voor waterkwaliteit.\n    Deze functies worden gebruikt voor rapportage en anlyse van waterkwaliteit bij HHSK.\n    Gemaakt: Maart 2019.",
         "Depends": "R (>= 4.1.0)",
         "License": "MIT + file LICENSE",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.3.3",
         "Roxygen": "list(markdown = TRUE)",
         "Imports": "dplyr, leaflet, lubridate, ggplot2, scales, rlang, purrr,\ntibble, stringr, forcats, sf, magrittr, stats, httr2, tools,\nsystemfonts, utils, quarto, twn",
         "Suggests": "testthat, odbc, DBI, rstudioapi",
         "URL": "https://github.com/HHSK-wkl/HHSKwkl,\nhttps://hhsk-wkl.github.io/HHSKwkl/",
         "BugReports": "https://github.com/HHSK-wkl/HHSKwkl/issues",
+        "Config/roxygen2/version": "8.0.0",
         "RemoteType": "github",
         "RemoteHost": "api.github.com",
         "RemoteRepo": "HHSKwkl",
         "RemoteUsername": "HHSK-wkl",
         "RemotePkgRef": "HHSK-wkl/HHSKwkl",
         "RemoteRef": "HEAD",
-        "RemoteSha": "bd3ff8a7964886ec7cca03e742c8ac74686b91eb",
+        "RemoteSha": "3c623254cbae4b3649f7c5189167f56790c2c1f5",
         "GithubRepo": "HHSKwkl",
         "GithubUsername": "HHSK-wkl",
         "GithubRef": "HEAD",
-        "GithubSHA1": "bd3ff8a7964886ec7cca03e742c8ac74686b91eb",
+        "GithubSHA1": "3c623254cbae4b3649f7c5189167f56790c2c1f5",
         "NeedsCompilation": "no",
-        "Packaged": "2026-07-28 10:12:33 UTC; tent",
+        "Packaged": "2026-09-01 08:04:46 UTC; tent",
         "Author": "Johan van Tent [aut, cre]",
         "Maintainer": "Johan van Tent <j.van.tent@hhsk.nl>",
-        "Built": "R 4.6.0; ; 2026-07-28 10:12:37 UTC; windows"
+        "Built": "R 4.6.0; ; 2026-09-01 08:04:55 UTC; windows"
       }
     },
     "KernSmooth": {
@@ -6500,7 +6500,7 @@
   },
   "files": {
     "_defaults/index.qmd": {
-      "checksum": "658f678dcb238c3ba2fe913240cf734b"
+      "checksum": "8d89fbc6bb2608cc30c73e0abed7f7a6"
     },
     "_extensions/HHSK-wkl/brand_hhsk/_extension.yml": {
       "checksum": "c4e3434551532212fe13637f3624e128"
@@ -6554,10 +6554,22 @@
       "checksum": "1d06bdf9bf899541ebf118a0e712daf4"
     },
     "_freeze/posts/2026-08-27-scatter-Krimpenerhout/index/execute-results/html.json": {
-      "checksum": "59a0c332f547891e4278d507a6eda2bb"
+      "checksum": "a11725ed600d14f8d7021bd2de3f9b03"
     },
     "_freeze/posts/2026-08-27-scatter-Krimpenerhout/index/figure-html/unnamed-chunk-1-1.png": {
-      "checksum": "9d1aade7f46e31497e994716f7a96020"
+      "checksum": "e9e77b95d72456adc6c1431b222b9dae"
+    },
+    "_freeze/posts/2026-08-31-blauwalgtaxa-krimpenerhout/index/execute-results/html.json": {
+      "checksum": "40a51e8e2d64c485c6bc0b8e4f173bff"
+    },
+    "_freeze/posts/2026-08-31-blauwalgtaxa-krimpenerhout/index/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "072f8806463874c052377e400e49d62a"
+    },
+    "_freeze/posts/2026-09-01-fluoroprobe-vs-biovolume/index/execute-results/html.json": {
+      "checksum": "fe832bbd8f275dd34f068da82e21be87"
+    },
+    "_freeze/posts/2026-09-01-fluoroprobe-vs-biovolume/index/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "081bc7f32eab6e286f4af8d360ea137d"
     },
     "_freeze/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -6695,10 +6707,10 @@
       "checksum": "203466f7e155187aca497f4611ee633b"
     },
     "_site/index.html": {
-      "checksum": "fa64e36dcb51f6eecb4885578dc208af"
+      "checksum": "9a8bbeef83a802e9bbdb91bbe8f7186b"
     },
     "_site/listings.json": {
-      "checksum": "8ed3e9527deceea44dbf19f251fb3ca0"
+      "checksum": "7042bec979066ac9cd41cd79a8c725fd"
     },
     "_site/posts/2026-08-15-meetnet-peilgebieden/index.html": {
       "checksum": "43c7c7aaac61137fde7a3a039e38584b"
@@ -6734,13 +6746,25 @@
       "checksum": "1d06bdf9bf899541ebf118a0e712daf4"
     },
     "_site/posts/2026-08-27-scatter-Krimpenerhout/index.html": {
-      "checksum": "80a4b74b8c849d536c1784506e8a88c4"
+      "checksum": "54a82a8e3f7a9cd8efc65d40fcc5f577"
     },
     "_site/posts/2026-08-27-scatter-Krimpenerhout/index_files/figure-html/unnamed-chunk-1-1.png": {
-      "checksum": "9d1aade7f46e31497e994716f7a96020"
+      "checksum": "e9e77b95d72456adc6c1431b222b9dae"
+    },
+    "_site/posts/2026-08-31-blauwalgtaxa-krimpenerhout/index.html": {
+      "checksum": "752fffa4413c9853710ce5f79dda7ce6"
+    },
+    "_site/posts/2026-08-31-blauwalgtaxa-krimpenerhout/index_files/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "072f8806463874c052377e400e49d62a"
+    },
+    "_site/posts/2026-09-01-fluoroprobe-vs-biovolume/index.html": {
+      "checksum": "36649a21669f748b0e348c3dbf10add2"
+    },
+    "_site/posts/2026-09-01-fluoroprobe-vs-biovolume/index_files/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "081bc7f32eab6e286f4af8d360ea137d"
     },
     "_site/search.json": {
-      "checksum": "2ebc22605c181b5f5212f569f84c3829"
+      "checksum": "3f093ad70b4e227d0385943bf789e24a"
     },
     "_site/site_libs/bootstrap/bootstrap-6c399f44800f217e54139a7966ba4c3a.min.css": {
       "checksum": "6c399f44800f217e54139a7966ba4c3a"
@@ -6956,7 +6980,7 @@
       "checksum": "31a5a9257c072454fdd305d08a8c1f76"
     },
     "posts/_metadata.yml": {
-      "checksum": "8bcb6b29f0a2436c347a042c69ef43a5"
+      "checksum": "43c3a84176ad9847b108ef16924b2791"
     },
     "posts/2026-08-15-meetnet-peilgebieden/index.qmd": {
       "checksum": "99c842953e144d8751d61987173987e7"
@@ -6980,10 +7004,22 @@
       "checksum": "31316f6c1af82e6bac1e9991e633ef7c"
     },
     "posts/2026-08-27-scatter-Krimpenerhout/index.qmd": {
-      "checksum": "5e5a5225f88646cf50a4a56efa59c081"
+      "checksum": "a83a21c8de0821aa028d3308acd1b753"
+    },
+    "posts/2026-08-31-blauwalgtaxa-krimpenerhout/code_blauwalg_plot.R": {
+      "checksum": "09949c1446795dbcce05894fae1d844b"
+    },
+    "posts/2026-08-31-blauwalgtaxa-krimpenerhout/index.qmd": {
+      "checksum": "b79c6edd6587834e0385a8ebe6381af9"
+    },
+    "posts/2026-09-01-fluoroprobe-vs-biovolume/code_fluoroprobe_vs_biovolume.R": {
+      "checksum": "5f15e243aef3fdc32a15af8aa6354728"
+    },
+    "posts/2026-09-01-fluoroprobe-vs-biovolume/index.qmd": {
+      "checksum": "b6d2d1c73078261c92f553eae190632b"
     },
     "R/write_manifest.R": {
-      "checksum": "626790a909ab846e24b0f6125a335f20"
+      "checksum": "57dd88f5622a1651d5fc3cf4ad019c4a"
     },
     "README.md": {
       "checksum": "2dc8bedf89a73639a1a1de518a78dcc9"

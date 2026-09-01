@@ -1,7 +1,7 @@
 ---
 title: "Scatterplots Krimpenerhout"
 description: "Beschrijving"
-date: today
+date: 2026-08-27
 code-fold: true
 lightbox: true
 author: "Johan van Tent"
@@ -9,7 +9,8 @@ author: "Johan van Tent"
 execute: 
   warning: false
   message: false
-# categories: [biologie, chemie, kaart]
+  freeze: auto
+categories: [chemie]
 editor_options: 
   chunk_output_type: console
 ---
