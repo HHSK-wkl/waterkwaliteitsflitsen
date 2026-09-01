@@ -24,8 +24,30 @@ fys_chem %>%
   geom_point() +
   scale_x_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
-  coord_cartesian(xlim = c(0, 100)) +
+  coord_cartesian(xlim = c(0, 105), ylim = c(0, 280)) +
   facet_wrap(~jaar) +
   labs(title = "Fluoroprobe geeft hogere waarden dan biovolume * 3",
        caption = "Lijn geeft 1:1 verhouding weer")
+
+
+fys_chem %>% 
+  filter(parnr %in% c(415, 429)) %>% 
+  # select(mp, datum, par, waarde) %>% 
+  summarise(waarde = mean(waarde), .by = c(mp, datum, par)) %>% 
+  pivot_wider(names_from = par, values_from = waarde) %>% 
+  rename(fluoroprobe = 3, biovolume = 4) %>% 
+  filter(!is.na(fluoroprobe), !is.na(biovolume)) %>% 
+  add_jaar() %>% 
+  filter(fluoroprobe > 12 | biovolume > 4) %>% 
+  ggplot(aes(biovolume * 3, fluoroprobe)) +
+  # geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = grijs_m) +
+  geom_hline(yintercept = 12, linetype = "dashed", colour = "red") +
+  geom_vline(xintercept = 12, linetype = "dashed", colour = "red") +
+  geom_point() +
+  scale_x_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  coord_cartesian(xlim = c(0, 70), ylim = c(0, 70)) +
+  facet_wrap(~jaar, axes = "all") +
+  labs(title = "Fluoroprobe geeft hogere waarden dan biovolume * 3",
+       caption = "Lijn geeft waarschuwingsgrens")
   
