@@ -51,3 +51,20 @@ fys_chem %>%
   labs(title = "Fluoroprobe geeft hogere waarden dan biovolume * 3",
        caption = "Lijn geeft waarschuwingsgrens")
   
+
+
+zwemlocaties <- c("S_0124", "S_0058", "S_0131", "S_1120", "S_1124", "S_0128", "K_1102", "S_0152")
+
+fys_chem %>% 
+  filter(parnr %in% c(415, 429)) %>% 
+  # select(mp, datum, par, waarde) %>% 
+  summarise(waarde = mean(waarde), .by = c(mp, datum, par)) %>% 
+  pivot_wider(names_from = par, values_from = waarde) %>% 
+  rename(fluoroprobe = 3, biovolume = 4) %>% 
+  filter(!is.na(fluoroprobe), !is.na(biovolume)) %>% 
+  add_jaar() %>% 
+  # filter(jaar > 2024) %>% 
+  filter(mp %in% zwemlocaties) %>% 
+  mutate(waarschuwing_fluo = fluoroprobe > 12,
+         waarschuwing_biovol = biovolume > 4) %>% 
+  count(waarschuwing_fluo, waarschuwing_biovol)
