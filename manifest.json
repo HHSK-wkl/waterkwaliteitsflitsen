@@ -6575,7 +6575,7 @@
       "checksum": "cc1070ee9d0762101431396ac6b096f2"
     },
     "_freeze/posts/2026-09-17-nitraatmeters/index/execute-results/html.json": {
-      "checksum": "a83084a6a597616920517fa74748ffc0"
+      "checksum": "7f79986c595faae98504c95ea8b981f0"
     },
     "_freeze/posts/2026-09-17-nitraatmeters/index/figure-html/opgeschoonde-data-1.png": {
       "checksum": "282088503c01e0c634e57d9a5a76c433"
@@ -6725,7 +6725,7 @@
       "checksum": "203466f7e155187aca497f4611ee633b"
     },
     "_site/index.html": {
-      "checksum": "e37f3b8b2674f3eda9fc2c577bcc7593"
+      "checksum": "540046f7dfc1bbe4cb7428a9f81c1a07"
     },
     "_site/listings.json": {
       "checksum": "cfb86eb08ccc537b5a6c0ead572260dd"
@@ -6785,7 +6785,7 @@
       "checksum": "cc1070ee9d0762101431396ac6b096f2"
     },
     "_site/posts/2026-09-17-nitraatmeters/index.html": {
-      "checksum": "faa642fde137ce4ff3046738372350ab"
+      "checksum": "de85e6f0ac82dda1cddb7e4575c2c54d"
     },
     "_site/posts/2026-09-17-nitraatmeters/index_files/figure-html/opgeschoonde-data-1.png": {
       "checksum": "282088503c01e0c634e57d9a5a76c433"
@@ -6800,7 +6800,7 @@
       "checksum": "5e05c62a3ebda1e4584666d5e63ccac6"
     },
     "_site/search.json": {
-      "checksum": "940e319ce7aa5f939a1e44f729544f08"
+      "checksum": "644606e8e00f07093c9cf184c4a81833"
     },
     "_site/site_libs/bootstrap/bootstrap-6c399f44800f217e54139a7966ba4c3a.min.css": {
       "checksum": "6c399f44800f217e54139a7966ba4c3a"
@@ -7097,7 +7097,7 @@
       "checksum": "66ce47da4274aea52a9fa0271f13606d"
     },
     "posts/2026-09-17-nitraatmeters/index.qmd": {
-      "checksum": "c3155bc60bb78f01ad10958e05bc238c"
+      "checksum": "47ca58a82f224746f0feae2d6e4ba1a7"
     },
     "posts/2026-09-17-nitraatmeters/nitraatmeters.R": {
       "checksum": "9d0a139837cdd353482a9004589fd3ed"
