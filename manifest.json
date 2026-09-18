@@ -1,7 +1,7 @@
 {
   "version": 1,
   "locale": "nl_NL",
-  "platform": "4.6.0",
+  "platform": "4.6.1",
   "metadata": {
     "appmode": "quarto-static",
     "primary_rmd": "index.qmd",
@@ -162,7 +162,7 @@
         "Package": "HHSKwkl",
         "Type": "Package",
         "Title": "Functies HHSK Waterkwaliteit",
-        "Version": "0.5.2.9002",
+        "Version": "0.5.2.9003",
         "Authors@R": "person(\"Johan\", \"van Tent\", email = \"j.van.tent@hhsk.nl\", \n    role = c(\"aut\", \"cre\"))",
         "Description": "Functies voor waterkwaliteit.\n    Deze functies worden gebruikt voor rapportage en anlyse van waterkwaliteit bij HHSK.\n    Gemaakt: Maart 2019.",
         "Depends": "R (>= 4.1.0)",
@@ -181,16 +181,16 @@
         "RemoteUsername": "HHSK-wkl",
         "RemotePkgRef": "HHSK-wkl/HHSKwkl",
         "RemoteRef": "HEAD",
-        "RemoteSha": "3c623254cbae4b3649f7c5189167f56790c2c1f5",
+        "RemoteSha": "87e48c3165ff209a37ee1032c647e4957d83ff26",
         "GithubRepo": "HHSKwkl",
         "GithubUsername": "HHSK-wkl",
         "GithubRef": "HEAD",
-        "GithubSHA1": "3c623254cbae4b3649f7c5189167f56790c2c1f5",
+        "GithubSHA1": "87e48c3165ff209a37ee1032c647e4957d83ff26",
         "NeedsCompilation": "no",
-        "Packaged": "2026-09-01 08:04:46 UTC; tent",
+        "Packaged": "2026-09-07 08:04:15 UTC; tent",
         "Author": "Johan van Tent [aut, cre]",
         "Maintainer": "Johan van Tent <j.van.tent@hhsk.nl>",
-        "Built": "R 4.6.0; ; 2026-09-01 08:04:55 UTC; windows"
+        "Built": "R 4.6.0; ; 2026-09-07 08:04:22 UTC; windows"
       }
     },
     "KernSmooth": {
@@ -215,7 +215,7 @@
         "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2025-01-01 10:25:36 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:16:39 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:32:40 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -245,7 +245,7 @@
         "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2025-02-28 17:44:52 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:10:35 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:23:25 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -279,7 +279,7 @@
         "Maintainer": "Martin Maechler <mmaechler+Matrix@gmail.com>",
         "Repository": "CRAN",
         "Date/Publication": "2026-03-21 14:40:03 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:10:57 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:23:58 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -1055,7 +1055,7 @@
         "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2025-01-01 10:25:33 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:16:55 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:04 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -1222,7 +1222,7 @@
         "Packaged": "2024-03-31 18:18:09 UTC; luke",
         "Repository": "CRAN",
         "Date/Publication": "2024-03-31 20:10:06 UTC",
-        "Built": "R 4.6.0; ; 2026-04-24 08:16:28 UTC; windows"
+        "Built": "R 4.6.1; ; 2026-06-24 08:32:25 UTC; windows"
       }
     },
     "colorspace": {
@@ -3056,7 +3056,7 @@
         "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2026-02-09 06:10:13 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:10:45 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:23:40 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -3503,7 +3503,7 @@
         "Maintainer": "R Core Team <R-core@R-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2026-03-27 18:20:48 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:15:10 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:30:23 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -3529,7 +3529,7 @@
         "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
         "Repository": "CRAN",
         "Date/Publication": "2025-01-01 10:25:43 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:16:59 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:33:09 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -4774,7 +4774,7 @@
         "BugReports": "https://github.com/bethatkinson/rpart/issues",
         "Packaged": "2026-03-26 15:46:48 UTC; atkinson",
         "Date/Publication": "2026-03-27 06:10:02 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:16:45 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:32:48 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -5363,7 +5363,7 @@
         "Maintainer": "Terry M Therneau <therneau.terry@mayo.edu>",
         "Repository": "CRAN",
         "Date/Publication": "2026-01-16 09:00:02 UTC",
-        "Built": "R 4.6.0; x86_64-w64-mingw32; 2026-04-24 08:15:31 UTC; windows",
+        "Built": "R 4.6.1; x86_64-w64-mingw32; 2026-06-24 08:30:55 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -6566,10 +6566,28 @@
       "checksum": "072f8806463874c052377e400e49d62a"
     },
     "_freeze/posts/2026-09-01-fluoroprobe-vs-biovolume/index/execute-results/html.json": {
-      "checksum": "fe832bbd8f275dd34f068da82e21be87"
+      "checksum": "8e420110ebf6a30554fb4b460dbab596"
     },
     "_freeze/posts/2026-09-01-fluoroprobe-vs-biovolume/index/figure-html/unnamed-chunk-1-1.png": {
-      "checksum": "081bc7f32eab6e286f4af8d360ea137d"
+      "checksum": "34cb4e6c9acf8ac4c7271a954c2dfd90"
+    },
+    "_freeze/posts/2026-09-01-fluoroprobe-vs-biovolume/index/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "cc1070ee9d0762101431396ac6b096f2"
+    },
+    "_freeze/posts/2026-09-17-nitraatmeters/index/execute-results/html.json": {
+      "checksum": "a83084a6a597616920517fa74748ffc0"
+    },
+    "_freeze/posts/2026-09-17-nitraatmeters/index/figure-html/opgeschoonde-data-1.png": {
+      "checksum": "282088503c01e0c634e57d9a5a76c433"
+    },
+    "_freeze/posts/2026-09-17-nitraatmeters/index/figure-html/ruwe-data-1.png": {
+      "checksum": "414efd6f650e246a30d06989943bd2ea"
+    },
+    "_freeze/posts/2026-09-17-nitraatmeters/index/figure-html/ruwe-data-2.png": {
+      "checksum": "468eb90f268311595734a5ce38aeac88"
+    },
+    "_freeze/posts/2026-09-17-nitraatmeters/index/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "5e05c62a3ebda1e4584666d5e63ccac6"
     },
     "_freeze/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
@@ -6707,10 +6725,10 @@
       "checksum": "203466f7e155187aca497f4611ee633b"
     },
     "_site/index.html": {
-      "checksum": "9a8bbeef83a802e9bbdb91bbe8f7186b"
+      "checksum": "e37f3b8b2674f3eda9fc2c577bcc7593"
     },
     "_site/listings.json": {
-      "checksum": "7042bec979066ac9cd41cd79a8c725fd"
+      "checksum": "cfb86eb08ccc537b5a6c0ead572260dd"
     },
     "_site/posts/2026-08-15-meetnet-peilgebieden/index.html": {
       "checksum": "43c7c7aaac61137fde7a3a039e38584b"
@@ -6758,13 +6776,31 @@
       "checksum": "072f8806463874c052377e400e49d62a"
     },
     "_site/posts/2026-09-01-fluoroprobe-vs-biovolume/index.html": {
-      "checksum": "36649a21669f748b0e348c3dbf10add2"
+      "checksum": "595240ce0ddf2be852bc3f5dd3336eec"
     },
     "_site/posts/2026-09-01-fluoroprobe-vs-biovolume/index_files/figure-html/unnamed-chunk-1-1.png": {
-      "checksum": "081bc7f32eab6e286f4af8d360ea137d"
+      "checksum": "34cb4e6c9acf8ac4c7271a954c2dfd90"
+    },
+    "_site/posts/2026-09-01-fluoroprobe-vs-biovolume/index_files/figure-html/unnamed-chunk-1-2.png": {
+      "checksum": "cc1070ee9d0762101431396ac6b096f2"
+    },
+    "_site/posts/2026-09-17-nitraatmeters/index.html": {
+      "checksum": "faa642fde137ce4ff3046738372350ab"
+    },
+    "_site/posts/2026-09-17-nitraatmeters/index_files/figure-html/opgeschoonde-data-1.png": {
+      "checksum": "282088503c01e0c634e57d9a5a76c433"
+    },
+    "_site/posts/2026-09-17-nitraatmeters/index_files/figure-html/ruwe-data-1.png": {
+      "checksum": "414efd6f650e246a30d06989943bd2ea"
+    },
+    "_site/posts/2026-09-17-nitraatmeters/index_files/figure-html/ruwe-data-2.png": {
+      "checksum": "468eb90f268311595734a5ce38aeac88"
+    },
+    "_site/posts/2026-09-17-nitraatmeters/index_files/figure-html/unnamed-chunk-1-1.png": {
+      "checksum": "5e05c62a3ebda1e4584666d5e63ccac6"
     },
     "_site/search.json": {
-      "checksum": "3f093ad70b4e227d0385943bf789e24a"
+      "checksum": "940e319ce7aa5f939a1e44f729544f08"
     },
     "_site/site_libs/bootstrap/bootstrap-6c399f44800f217e54139a7966ba4c3a.min.css": {
       "checksum": "6c399f44800f217e54139a7966ba4c3a"
@@ -7013,10 +7049,61 @@
       "checksum": "b79c6edd6587834e0385a8ebe6381af9"
     },
     "posts/2026-09-01-fluoroprobe-vs-biovolume/code_fluoroprobe_vs_biovolume.R": {
-      "checksum": "5f15e243aef3fdc32a15af8aa6354728"
+      "checksum": "b20072536e95b610956b9de6433d1ac3"
     },
     "posts/2026-09-01-fluoroprobe-vs-biovolume/index.qmd": {
-      "checksum": "b6d2d1c73078261c92f553eae190632b"
+      "checksum": "7508c1d2143f4dcef5c4737d22e14d21"
+    },
+    "posts/2026-09-17-nitraatmeters/blockbax-explorer-export-2026-09-17_14-46-05.csv": {
+      "checksum": "bea4085d8d8ca72c794328c9a209a7c4"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.cpg": {
+      "checksum": "ae3b3df9970b49b6523e608759bc957d"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.dbf": {
+      "checksum": "3043e1dcab48cca9a80c1dfeb71258c9"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.prj": {
+      "checksum": "4250ee41129d6f43b4b897848c0655ac"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.sbn": {
+      "checksum": "ef10387c7602c53940748bbe2879723b"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.sbx": {
+      "checksum": "cfabc826b3640e8711f14d22b2acca2b"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.shp": {
+      "checksum": "2f35ada8cbd55835afbb1fd0371bb310"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.shp.xml": {
+      "checksum": "4203df7820a9db873b43097a0156e512"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Meetpunten_Waterkwaliteit_T&H.shx": {
+      "checksum": "a3cd91b268af689cc38209dcd5bc9158"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Metingen_Nitraat_TH.cpg": {
+      "checksum": "ae3b3df9970b49b6523e608759bc957d"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Metingen_Nitraat_TH.dbf": {
+      "checksum": "86a987b9dfa992ea94184421ff41688f"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Metingen_Nitraat_TH.shp": {
+      "checksum": "e58cd0f546eb5905940c65312b2429ef"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Metingen_Nitraat_TH.shx": {
+      "checksum": "d83210d895e3e665373007dd0112fdab"
+    },
+    "posts/2026-09-17-nitraatmeters/data/Metingen_Nitraat_TH.xml": {
+      "checksum": "66ce47da4274aea52a9fa0271f13606d"
+    },
+    "posts/2026-09-17-nitraatmeters/index.qmd": {
+      "checksum": "c3155bc60bb78f01ad10958e05bc238c"
+    },
+    "posts/2026-09-17-nitraatmeters/nitraatmeters.R": {
+      "checksum": "9d0a139837cdd353482a9004589fd3ed"
+    },
+    "posts/2026-09-17-nitraatmeters/WaterkwaliteitsmetingTenH.zip": {
+      "checksum": "c535bd0c94043151df665f340932d7ff"
     },
     "R/write_manifest.R": {
       "checksum": "57dd88f5622a1651d5fc3cf4ad019c4a"

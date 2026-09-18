@@ -1,0 +1,166 @@
+---
+title: "Nitraatmeters"
+description: "Analyse van de resultaten van de eerste 6 nitraatmeters"
+date: 2026-09-18
+code-fold: true
+author: "Johan van Tent"
+lightbox: true
+toc: true
+# image: "../../images/default_veenweide.jpg"
+execute: 
+  warning: false
+  message: false
+categories: [chemie]
+fig-width: 12
+fig-height: 9
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: data-inlezen
+library(tidyverse)
+library(HHSKwkl)
+library(glue)
+# library(timetk)
+
+theme_set(hhskthema())
+
+pad_data <- "blockbax-explorer-export-2026-09-17_14-46-05.csv"
+
+data_raw <- read_csv(pad_data) %>% 
+  rename(mp = 1, datumtijd = 2, waarde = 3) %>% 
+  mutate(mp = str_remove(mp, "N-NO3 for "))
+
+
+meetpunten_sel <- c("S_0633", "S_1212", "S_1228", "S_1258","S_0634")
+nitraat_lab <- data_online("fys_chem.rds") %>% filter(parnr == 6, mp %in% meetpunten_sel) %>% 
+  filter(year(datum) == 2026, month(datum) >= 4)
+
+```
+
+## Ruwe data
+
+```{r}
+#| label: ruwe-data
+data_raw %>% 
+  ggplot(aes(datumtijd, waarde)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  facet_wrap(~mp) +
+  labs(title = "Ruwe datareeksen")
+  
+
+data_raw %>% 
+  ggplot(aes(waarde)) +
+  geom_histogram(bins = 50) +
+  # geom_density() +
+  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  facet_wrap(~mp) +
+  labs(title = "Histogram met de verdeling van de meetwaarden")
+
+
+```
+
+De data heeft opvallend veel 0-waarden. Verder lijken er kortdurende pieken in de data te zitten die mogelijk meetfouten betreffen.
+
+## Opgeschoonde data
+
+Voor de volgende analyses en figuren worden 0 waarden beschouwd als missende waarden. Verder wordt de data geaggregeerd per 2 uur waarbij de mediane waarde als waarde wordt gehanteerd.
+
+Verder zijn er pas vanaf 20 april metingen op alle locaties. Metingen voor die tijd worden even buiten beschouwing gelaten
+
+
+```{r}
+#| label: opgeschoonde-data
+
+data <- 
+  data_raw %>% 
+  filter(datumtijd >= ymd("20260420")) %>% 
+  mutate(waarde = ifelse(waarde == 0, NA, waarde)) %>% 
+  mutate(datumtijd = floor_date(datumtijd, "2 hours")) %>% 
+  summarise(waarde = median(waarde, na.rm = TRUE), .by = c(mp, datumtijd))
+
+data %>% 
+  ggplot(aes(datumtijd, waarde)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  facet_wrap(~mp) +
+  labs(title = "Opgeschoonde datareeksen + labmetingen", caption = "Labmetingen in oranje") +
+  geom_point(aes(datum, waarde), colour = oranje_m, data = nitraat_lab) +
+  geom_line(aes(datum, waarde), colour = oranje_m, data = nitraat_lab, linetype = "dashed")
+
+
+```
+
+In de opgeschoonde datareeksen vallen gelijk al een aantal dingen op.
+
+- Er is een behoorlijk verschil in de pieken van de metingen. 
+- De gemiddelde waarde van de nitraatconcentratie is ook behoorlijk verschillen.
+- De meetpunten S_0634 en S_1212 laten relatief weinig variatie zien.
+- De concentratie bij meetpunt S_1258 was tot half mei behoorlijk hoog. Vanaf dat moment worden er echter geen hoge nitraatwaardes meer geconstateerd.
+- De pieken op meetpunt S_1228 behoorlijk hoog, maar wel vaak van korte duur.
+- De meetpunten S_0633 en Narcissenweg laten hoge waarden zien, maar hier zijn hogere waarden vaak ook van langere duur.
+
+Wat betekenen deze constateringen.
+
+- Bij meetpunt S_1258 lijkt het erop alsof er een of meerder lozingen waren die zijn gestopt halverwege mei.
+- Bij meetpunt S_1212 en S_0634 is er geen duidelijke indicatie voor lozingen. Als er lozingen zijn dan zijn die al behoorlijk verdund tegen de tijd dat ze bij dit meetpunt komen.
+- Meetpunt S_1228 lijkt beïnvloed te worden door een lozing die vrij groot is, maar ook op het meetpunt niet lang aanhoudt. Dit suggereert dat de lozing vrij dichtbij het meetpunt moet zijn. Daarnaast zijn er mogelijk nog wat kleinere lozingen.
+- De meetpunten Narcissenweg en S_0633 gedragen zich als verzamelpunten van water met diverse lozingen. Dit leidt tot hogere concentraties en bredere pieken die waarschijnlijk bestaan uit meerdere lozingen.
+
+
+
+```{r}
+
+data %>% 
+  mutate(maand = month(datumtijd, label = TRUE)) %>% 
+  summarise(waarde = mean(waarde, na.rm = TRUE), .by = c(mp, maand)) %>% 
+  mutate(mp = fct_reorder(mp, waarde, .desc = TRUE)) %>% 
+  ggplot(aes(maand, waarde)) + 
+  geom_col() +
+  facet_wrap(~mp) +
+  scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05))) +
+  labs(title = "Maandgemiddelde waarden")
+
+
+
+```
+
+## Acties o.b.v. handmetingen
+
+De enige registratie van opvolging o.b.v. de nitraatmeters die momenteel beschikbaar is, is de registratie van nitraatmetingen. Het ligt voor de hand dat de handnitraatmeters gebruikt worden om lozingsbronnen beter te lokaliseren t.o.v. de vaste meters. Het is echter niet helemaal duidelijk of alle metingen ook zijn vastgelegd.
+
+Bij meetpunt S_1258 lijkt er duidelijk iets veranderd te zijn. Er zijn echter geen handmetingen beschikbaar die er op wijzen dat deze verandering het gevolg is van acties o.b.v. de vaste nitraatmeter.
+
+Bij meetpunt S_1212 zijn op 4 mei diverse handmetingen uitgevoerd en op die dag is er ook een piek te zien in de nitraatmeter. Het lijkt erop dat hier een lozing is gevonden met de nitraatmeter.
+
+Bijj meetpunt S_1228 is te zien dat er in augustus een lozing is opgespoord met de handmetingen. Dit is mogelijk n.a.v. een piek van de vaste meter enkele dagen eerder. Daarna lijkt het patroon van hoge pieken ook te veranderen en blijven de concentraties lager.
+
+Bij meetpunt Narcissenweg en bij meetpunt S_0633 zijn met de handmeter bovenstrooms enkele lozingen beter gelokaliseerd. Het is echter niet goed mogelijk deze te koppelen aan pieken bij de meter. Wel laat deze meter voortdurend vrij hoge waarden zien.
+
+## Conclusies
+
+Bij meetpunt S_1258 is een duidelijke verbetering zichtbaar. Hier lijkt een lozing te zijn gestopt. Wat daarvoor de oorzaak is, is onduidelijk. Sinds deze lozing is gestopt geeft het meetpunt weinig interessante informatie meer.
+
+Bij meetpunt S_0634 zijn hoofdzakelijk lagere waarden te zien. Hier is ook niet aanvullend gemeten met de handmeter.Er lijkt geen specifieke aanleiding te zijn om hier te blijven meten.
+
+Bij S_1212 zijn ook vooral lagere waarden te zien. Dit is sinds juli nog wat lager dan daarvoor mogelijk door de lozing die hier opgespoord lijkt te zijn.
+
+Bij meetpunt S_1228 lijkt een lozing te zijn gestopt op basis van de vaste meter. Sindsdien is de situatie verbeterd. Maar het is nog te vroeg om te kunnen beoordelen of het doorgaan met meten hier nog waar de heeft.
+
+De meetpunten Narcissenweg en S_0633 gedragen zich als verzamelpunten. Ze zijn indicatief voor diverse lozingen in bovenstroomse gebied die er ook lijken te zijn. Ze laten goed zijn dat er problemen zijn, maar lijken ook zo ver van de bronnen af te liggen dat het lastig is om hiermee gericht te zoeken naar bronnen.
+
+## Advies
+
+De meetpunten S_0634, S_1212 en S_1258 lijken momenteel weinig (meer) op te leveren. Deze meters kunnen waarschijnlijk beter elders ingezet worden.
+
+De meetpunten Narcissenweg en S_0633 geven een soort baseline van de algemene toestand. Dat kan interessant zijn, maar ze geven mogelijk niet zulke duidelijke indicaties om te handelen. Deze meters hebben alleen waarde in combinatie met andere vaste meters of met uitgebreidere zoekacties met de handmeter.
+
+Meetpunt S_1228 is nog niet duidelijk. Het kan goed zijn dat deze ook minder interessant wordt om te blijven volgen.
+
+Algemeen is het verstandig om de meters nog wel even te laten staan (tot eind oktober bijv.). Maar vervolgens volgens bovenstaand advies de meters weg te halen of te verplaatsen.
+
+
+
+
